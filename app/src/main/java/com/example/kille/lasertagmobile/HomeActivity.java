@@ -1,5 +1,6 @@
 package com.example.kille.lasertagmobile;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,6 +22,15 @@ public class HomeActivity extends AppCompatActivity {
                 Log.i("MyApp", "This is a log message");
                 Toast.makeText(getApplicationContext(), "Pew Pew", Toast.LENGTH_SHORT).show();
 
+            }
+        });
+
+        Button btnBlue = (Button)findViewById(R.id.btn_Bluetooth);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, Bluetooth.class));
             }
         });
 
