@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
@@ -14,6 +15,11 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        String value = getIntent().getStringExtra("USER_NAME");
+        TextView username = (TextView) findViewById(R.id.textUserName);
+        username.setText(value);
+
 
         Button btn = (Button) findViewById(R.id.btnFire);
         btn.setOnClickListener(new View.OnClickListener() {

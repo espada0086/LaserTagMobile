@@ -13,59 +13,37 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 1000;
+    private static int SPLASH_TIME_OUT = 500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button b1;
-        //EditText ed1,ed2;
-
-        b1 = (Button)findViewById(R.id.btnLogin);
-
-
+        Button b1 = (Button)findViewById(R.id.btnLogin);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText ed1 = (EditText)findViewById(R.id.editText1);
-                EditText ed2 = (EditText)findViewById(R.id.editText2);
 
-                if(ed1.getText().toString().equals("admin") &&
-                        ed2.getText().toString().equals("admin"))
-                {
-                    Toast.makeText(getApplicationContext(),"Redirecting...",Toast.LENGTH_SHORT).show();
-                    new Handler().postDelayed(new Runnable(){
+                if(ed1.getText().toString().equals(""))
+                    ed1.setText("Player");
+
+                final String value = ed1.getText().toString();
+
+                Toast.makeText(getApplicationContext(),"Redirecting...",Toast.LENGTH_SHORT).show();
+                new Handler().postDelayed(new Runnable(){
                         @Override
-                        public void run(){
+                        public void run()
+                        {
                             Intent homeIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                            homeIntent.putExtra("USER_NAME", value);
                             startActivity(homeIntent);
                             finish();
                         }
                     }, SPLASH_TIME_OUT);
-                }
-                else
-                    {
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
-                }
             }
         });
-
-
-
-        /*
-        Button btn = (Button) findViewById(R.id.btnLogin);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i("MyApp", "This is a log message");
-                Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        */
     }
 }
