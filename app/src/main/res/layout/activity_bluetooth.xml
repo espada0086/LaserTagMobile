@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/empty_background"
     tools:context="com.example.kille.lasertagmobile.Bluetooth">
 
 
@@ -27,6 +28,7 @@
             android:scaleX="1.7"
             android:scaleY="1.7"
             android:text="Toggle LED"
+            android:textColor="#fff"
             android:textStyle="bold" />
 
         <LinearLayout
