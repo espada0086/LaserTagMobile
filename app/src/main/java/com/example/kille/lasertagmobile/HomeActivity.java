@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
         Button btnBlue = (Button)findViewById(R.id.btn_Bluetooth);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btnBlue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeActivity.this, Bluetooth.class));
