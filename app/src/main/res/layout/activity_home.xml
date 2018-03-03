@@ -10,13 +10,13 @@
     <Button
         android:id="@+id/btnFire"
         android:layout_width="196dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="216dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="244dp"
         android:background="@drawable/round_button"
         android:gravity="center_vertical|center_horizontal"
         android:text="Fire"
-        android:textSize="50dp"
         android:textColor="#fff"
+        android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,8 +41,18 @@
         android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="104dp"
         android:text="Player"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Settings"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
