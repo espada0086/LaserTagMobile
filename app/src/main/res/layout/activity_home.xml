@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@drawable/gun"
     tools:context="com.example.kille.lasertagmobile.HomeActivity">
 
     <Button
         android:id="@+id/btnFire"
-        android:layout_width="wrap_content"
-        android:layout_height="62dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="196dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
         android:text="Fire"
+        android:textSize="50dp"
+        android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,24 +33,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFire" />
-
-    <TextView
-        android:id="@+id/textWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Welcome"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFire"
+        app:layout_constraintVertical_bias="0.937" />
 
     <TextView
         android:id="@+id/textUserName"
-        android:layout_width="wrap_content"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="148dp"
         android:text="Player"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
+        tools:layout_editor_absoluteY="91dp" />
+
 </android.support.constraint.ConstraintLayout>
