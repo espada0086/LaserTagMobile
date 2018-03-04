@@ -1,4 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <PreferenceCategory
+        android:title="Multiplayer Settings"
+        android:key="pref_key_storage_settings">
+        <CheckBoxPreference
+            android:key="pref_key_auto_delete"
+            android:summary="description of setting"
+            android:title="Setting #1"
+            android:defaultValue="false"/>
+        <ListPreference
+            android:key="PREF_LIST"
+            android:title="Number of Players"
+            android:summary="Select how many players"
+            android:entries="@array/listentries"
+            android:entryValues="@array/listvalues" />
+        <Preference
+            android:key="pref_key_mms_delete_limit"
+            android:dependency="pref_key_auto_delete"
+            android:summary="description of setting"
+            android:title="Setting #1" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Bluetooth Settings"
+        android:key="pref_key_storage_settings">
+        <CheckBoxPreference
+            android:key="pref_key_auto_delete"
+            android:summary="description of setting"
+            android:title="Setting #1"
+            android:defaultValue="false" />
+        <Preference
+            android:key="pref_key_sms_delete_limit"
+            android:dependency="pref_key_auto_delete"
+            android:summary="description of setting"
+            android:title="Setting #2"/>
+        <Preference
+            android:key="pref_key_mms_delete_limit"
+            android:dependency="pref_key_auto_delete"
+            android:summary="description of setting"
+            android:title="Setting #1" />
+    </PreferenceCategory>
+
+
 </PreferenceScreen>
