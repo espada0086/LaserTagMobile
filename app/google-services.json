@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "465898502250",
+    "firebase_url": "https://lasertagmobile-6d9e7.firebaseio.com",
+    "project_id": "lasertagmobile-6d9e7",
+    "storage_bucket": "lasertagmobile-6d9e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465898502250:android:414ee8dab788ce33",
+        "android_client_info": {
+          "package_name": "com.example.kille.lasertagmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465898502250-te9glg0h44m7vsa2stbntie3csp6k4s2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kille.lasertagmobile",
+            "certificate_hash": "c7a6763034a78694e869be64686f63511714eb85"
+          }
+        },
+        {
+          "client_id": "465898502250-f29k8agusoa23vu3972eufeg06gnhlvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kille.lasertagmobile",
+            "certificate_hash": "370b079432428bdb834f6115957a54d7b1b343a2"
+          }
+        },
+        {
+          "client_id": "465898502250-ec0aj4f168lpdbdbqkt5i14g6gmkcerq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTkr80allQMRP4XBpNLs_ZZLw8KmrUo8s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465898502250-ec0aj4f168lpdbdbqkt5i14g6gmkcerq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

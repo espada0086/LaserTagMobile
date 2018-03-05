@@ -48,7 +48,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
         </activity>
-
         <activity
             android:name=".AuthenticationActivity"
             android:parentActivityName=".HomeActivity">
@@ -58,7 +57,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
         </activity>
-
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>
