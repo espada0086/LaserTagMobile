@@ -11,20 +11,29 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class HomeActivity extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
+    String displayName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
 
         //Import data from LoginActivity Page
-        String value = getIntent().getStringExtra("USER_NAME");
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        displayName = currentUser.getDisplayName();
+        //String value = getIntent().getStringExtra("USER_NAME");
         TextView username = (TextView) findViewById(R.id.textUserName);
-        username.setText(value);
+        username.setText(displayName);
 
         //Fire Button
         Button btn = (Button) findViewById(R.id.btnFire);
