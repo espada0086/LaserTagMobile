@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         /*Disabled this for now */
-        //mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -34,8 +34,8 @@ public class HomeActivity extends AppCompatActivity {
 
         /*Disabled this for now */
         //Import data from LoginActivity Page
-        //FirebaseUser currentUser = mAuth.getCurrentUser();
-        //displayName = currentUser.getDisplayName();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        displayName = currentUser.getDisplayName();
         //String value = getIntent().getStringExtra("USER_NAME");
 
 
