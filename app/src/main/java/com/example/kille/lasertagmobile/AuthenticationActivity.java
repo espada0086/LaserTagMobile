@@ -37,10 +37,10 @@ public class AuthenticationActivity extends AppCompatActivity {
     }
 
     public void signedIn() {
-        Toast.makeText(getApplicationContext(),
-                "Redirecting...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Redirecting...", Toast.LENGTH_SHORT).show();
         Intent authenticatedIntent = new Intent(AuthenticationActivity.this, HomeActivity.class);
         startActivity(authenticatedIntent);
+        finish();
     }
 
     private void signIn(final String email, String password) {
@@ -83,7 +83,8 @@ public class AuthenticationActivity extends AppCompatActivity {
                 if(ed1.getText().toString().equals("admin") &&
                         ed2.getText().toString().equals("admin")) {
                     signedIn();
-                }else{
+                }
+                else {
                     email = ed1.getText().toString();
                     password = ed2.getText().toString();
                     signIn(email, password);

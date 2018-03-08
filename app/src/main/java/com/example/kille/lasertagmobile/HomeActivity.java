@@ -22,16 +22,23 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAuth = FirebaseAuth.getInstance();
+
+
+        /*Disabled this for now */
+        //mAuth = FirebaseAuth.getInstance();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
 
+
+        /*Disabled this for now */
         //Import data from LoginActivity Page
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        displayName = currentUser.getDisplayName();
+        //FirebaseUser currentUser = mAuth.getCurrentUser();
+        //displayName = currentUser.getDisplayName();
         //String value = getIntent().getStringExtra("USER_NAME");
+
+
         TextView username = (TextView) findViewById(R.id.textUserName);
         username.setText(displayName);
 
